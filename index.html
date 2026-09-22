@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>我的第一個前端體驗</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      transition: background-color 0.5s;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      background-color: #4CAF50;
+      color: white;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #message {
+      margin-top: 30px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>前端工程師 30 分鐘體驗</h1>
+  <p>點擊下面的按鈕，看看會發生什麼</p>
+  
+  <button onclick="changeColor()">點我試試</button>
+  
+  <div id="message"></div>
+
+  <script>
+    function changeColor() {
+      const colors = ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#FFEAA7", "#DDA0DD"];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      
+      document.body.style.backgroundColor = randomColor;
+      document.getElementById("message").innerText = "你剛剛做了一個前端互動功能！";
+    }
+  </script>
+</body>
+</html>
